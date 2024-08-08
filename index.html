@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModelHub</title>
+    <!-- Linking the external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Linking Google Fonts for Poppins and Futura -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Futura';
+            src: url('https://path-to-your-futura-font') format('woff2');
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container for the slider -->
+    <div class="slider">
+        <div class="slides">
+            <!-- Each div represents an image in the slider -->
+            <div class="slide"><img src="images/model1.jpg" alt="Model 1"></div>
+            <div class="slide"><img src="images/model2.jpg" alt="Model 2"></div>
+            <div class="slide"><img src="images/model3.jpg" alt="Model 3"></div>
+        </div>
+    </div>
+
+    <!-- Navigation sections for Models, Influencers, and Content Creators -->
+    <div class="sections">
+        <div class="section" id="models-section">
+            <h2>Models</h2>
+        </div>
+        <div class="section" id="influencers-section">
+            <h2>Influencers</h2>
+        </div>
+        <div class="section" id="creators-section">
+            <h2>Content Creators</h2>
+        </div>
+    </div>
+
+    <!-- Container for the content revealed when a section is clicked -->
+    <div id="content-reveal" class="hidden"></div>
+
+    <!-- Linking the external JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+

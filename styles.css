@@ -1,0 +1,82 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: beige; /* Setting the background color */
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+/* Slider Styles */
+.slider {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: slide 12s infinite;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sections Styles */
+.sections {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.section {
+    text-align: center;
+    font-family: 'Futura', sans-serif;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.section:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hidden Content Reveal */
+#content-reveal {
+    padding: 20px;
+    display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider {
+        height: 250px;
+    }
+}
+
+/* Slider Animation */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+
