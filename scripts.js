@@ -96,4 +96,35 @@ const swiper1 = new Swiper('.slider-wrapper', {
     const planDetails = document.querySelectorAll('.plan-content');
 
     buttons.forEach(button => {
-      
+        button.addEventListener('click', function() {
+            // Hide all plan details
+            planDetails.forEach(detail => detail.classList.remove('active'));
+
+            // Show the selected plan details
+            const selectedPlan = document.getElementById(button.dataset.plan);
+            if (selectedPlan) {
+                selectedPlan.classList.add('active');
+            }
+        });
+    });
+});
+
+
+// section to the about us-->
+//document.addEventListener('DOMContentLoaded', function () {
+    //const swiper = new Swiper('.swiper', {
+        //slidesPerView: 1,
+        //spaceBetween: 30,
+        //loop: true,
+        //pagination: {
+            //el: '.swiper-pagination',
+            //clickable: true,
+        //},
+        //navigation: {
+            //nextEl: '.swiper-button-next',
+            //prevEl: '.swiper-button-prev',
+        //},
+    //});
+//});
+
+// section to the login and signup-->
