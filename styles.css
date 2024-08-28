@@ -1,82 +1,473 @@
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: beige; /* Setting the background color */
+/* Basic reset to remove default margins and paddings */
+* {
     margin: 0;
     padding: 0;
-    color: black;
+    box-sizing: border-box;
 }
 
-/* Slider Styles */
+/* Apply the Poppins font to the entire body */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #3f361f; /* Dark grey text color */
+    background-color: #ffffff; /* Beige background color */
+}
+
+/* Style the header */
+header {
+    background-color: #ffffff; /* White background color */
+    color: #594f2e; /* Dark grey text color */
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Header container for alignment */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the header buttons */
+.header-buttons .btn {
+    background-color: #f5f5dc; /* Beige background color */
+    color: #594f2e; /* Black text color */
+    padding: 10px 20px;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.header-buttons .btn:hover {
+    background-color: #594f2e; /* Dark grey background color on hover */
+    color: #fff; /* White text color on hover */
+}
+
+/* Style for the thin line below the header */
+.header-line {
+    border: none;
+    height: 1px;
+    background-color: #ccc; /* Light grey color for the line */
+    margin: 20px 0;
+}
+
+/* Style for the search bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+.search-bar input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #594f2e;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border: 1px solid #594f2e;
+    background-color: #594f2e; /* Black background color */
+    color: #fff; /* White text color */
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.search-bar button:hover {
+    background-color: #e3e3cc/* Dark grey background color on hover */
+}
+
+/* Style the header */
+header {
+    background-color: #ffffff; /* Black background color */
+    color: #594f2e; /* White text color */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #594f2e; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Semi-bold font */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #f5f5dc; /* Beige text color on hover */
+}
+
+/* Style the hero section with sliding images */
+#hero {
+    margin: 20px 0;
+    overflow: hidden;
+}
+
 .slider {
     width: 100%;
-    height: 400px;
-    overflow: hidden;
+    overflow: hidden; /* Hide overflow to ensure only the visible images are shown */
     position: relative;
 }
 
 .slides {
     display: flex;
-    width: 300%;
-    height: 100%;
-    animation: slide 12s infinite;
+    width: calc(30rem * 11); /* Total width to include all slides and clones */
+    animation: slide 30s infinite linear; /* Adjust speed as necessary */
 }
 
 .slide {
-    width: 100%;
-    height: 100%;
+    width: 30rem; /* Fixed width for each slide */
+    flex-shrink: 0; /* Prevent slides from shrinking */
+    border-right: 10px solid #ffffff; /* White border between images */
 }
 
 .slide img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
-/* Sections Styles */
-.sections {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-30rem * 8)); /* Move by the width of all original slides */
+    }
 }
 
-.section {
+
+
+/* Style for section titles */
+section h2 {
+    margin: 20px 0;
     text-align: center;
-    font-family: 'Futura', sans-serif;
-    background-color: white;
-    padding: 20px;
+    font-size: 24px;
+    color: #594f2e; /* Black text color */
+}
+
+/* Ensure the website is mobile-friendly */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .slide img {
+        height: auto;
+    }
+}
+
+/* Styles for the Why ModelHub Section */
+.why-modelhub {
+    padding: 50px 20px; /* Adds space around the text */
+    background-color: white; /* Sets the background color to white */
+    color: black; /* Text color */
+    text-align: center; /* Centers the text */
+    font-family: 'Poppins', sans-serif; /* Uses Poppins font */
+}
+
+.why-modelhub h2 {
+    font-size: 2rem; /* Sets the font size for the header */
+    margin-bottom: 30px; /* Adds space below the header */
+    font-family: 'Futura', sans-serif; /* Uses Futura font for the header */
+}
+
+.why-modelhub p {
+    font-size: 1.2rem; /* Sets the font size for the body text */
+    line-height: 1.6; /* Adds spacing between lines */
+    max-width: 800px; /* Limits the width of the text for better readability */
+    margin: 0 auto; /* Centers the paragraph */
+}
+
+/* Style the Get Started button */
+.get-started .btn-get-started {
+    background-color: #594f2e; /* Black background color */
+    color: #ffffff; /* White text color */
+    padding: 11px 30px;
+    text-decoration: none; /* Remove underline */
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s; /* Smooth background color transition */
+    margin-bottom: 30px; /* Space between button and image */
+    margin-top: 30px; /* Add margin to move the button down */
+}
+
+.get-started .btn-get-started:hover {
+    background-color: #f5f5dc; /* Dark grey background color on hover */
+}
+
+/* Style for the image underneath the Get Started button */
+.why-modelhub-image img {
+    width: 70%;
+    margin-top: 20px; /* Add space between the button and the image */
+    /* max-width: 600px; Ensure the image doesn't get too large */
+    border-radius: 10px; /* Slightly rounded corners */
+    height: auto;
+}
+
+/* Styling for the 'How ModelHub Can Help You as a Creative' section */
+.how-modelhub-helps {
+    margin: 40px 0;
+    padding: 50px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 2px;
+}
+
+.how-modelhub-helps h2 {
+    text-align: center;
+    color: #594f2e;
+    font-size: 30px;
+    margin-bottom: 40px;
+    margin-top: 2px;
+    background-color: #ffffff;
+}
+
+.how-modelhub-helps__text {
+    flex: 1;
+    max-width: 55%; /* Adjust this percentage to control the text width */
+}
+
+.how-modelhub-helps__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adds space between text and image */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.dropdown-header {
+    cursor: pointer; /* Make the header clickable */
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 10px 10px;
+    width: 80%; /* Adjusted width */
     border-radius: 10px;
-    cursor: pointer;
+    background-color: #f5f5dc;
+    color: #3f361f;
     transition: background-color 0.3s ease;
 }
 
-.section:hover {
-    background-color: #f0f0f0;
+.dropdown-content {
+    display: none; /* Hidden by default */
+    border-left: 3px solid #3f361f; /* Optional: Add a border for styling */
+    background-color: #f5f5dc;
+    color: #3f361f;
 }
 
-/* Hidden Content Reveal */
-#content-reveal {
+.dropdown-header:hover {
+    background-color: #79683f;
+}
+
+.how-modelhub-helps__image {
+    flex: 1;
+    margin-left: 10px;
+    max-width: 40%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40%;
+}
+
+.how-modelhub-helps__image img {
+    width: 100%; /* Adjusted width */
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Container for the "Connect With Us" section */
+.section__container.connect-with-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 200px;
+    background-color: #f9f9f9;
+    margin-top: 2px;
+}
+
+/* Styling for the image */
+.connect__image img {
+    max-width: 100%;
+    border-radius: 20px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+/* Content styling */
+.connect-with-us__content {
+    max-width: 600px;
+    margin-left: 50px;
+}
+
+.section__header {
+    font-size: 2rem;
+    color: #594f2e;
+    margin-bottom: 20px;
+}
+
+.section__description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+ul li {
+    display: inline-block;
+    align-items: center;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ul li span {
+    color: #007bff; /* Change this color as needed */
+    margin-right: 10px;
+}
+
+/* Styling for the app store buttons */
+.connect__links a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.connect__links img {
+    width: 100px; /* Adjust size as needed */
+}
+
+
+/* Styling for the creative reviews*/
+.client__container {
+    padding: 0;
+    background-color: #f9f9f9;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .section__header {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .section__description {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #666;
+  }
+  
+  .card-list .card__item {
+    color: #666;
+    user-select: none;
     padding: 20px;
-    display: none;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .sections {
-        flex-direction: column;
-        align-items: center;
+  .card-list .card__item .client-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid #fff;
+    padding: 4px;
+  }
+
+  .client-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-list .card__item .client-profession {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin: 0 50px;
+  }
+
+  .card-list .card__item .message-button {
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color: #666;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #f5f5dc;
+    border: 1px solid transparent;
+    margin-top: 20px;
+    transition: 0.2s ease;
+  }
+
+  .card-list .card__item .message-button {
+    background: #f5f5dc;
+  }
+
+
+  .card-list .card__item p {
+    color: var(--text-light);
+    padding: 10px 35px;
+    border-radius: 6px;
+    transition: 0.2s ease;
+  }
+  
+  /* .slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+  }
+
+  .slider-wrapper .swiper-paignation-bullet {
+    background: #fff;
+    height: 15px;
+    width: 15px;
+  }
+
+  .slider-wrapper .swiper-slide-button {
+    color: #fff;
+    margin-top: -50px;
+    transition: 0.2 ease;
+  }
+
+  .slider-wrapper .swiper-slide-button:hover {
+    color: #d0b870;
+  } */
+
+  /* @media (max-width: 768px) {
+    .slider-wrapper {
+        margin: 0 10px 40px;
     }
 
-    .slider {
-        height: 250px;
+    .slider-wrapper .swiper-slide-button {
+        display: none;
     }
-}
-
-/* Slider Animation */
-@keyframes slide {
-    0% { transform: translateX(0%); }
-    33% { transform: translateX(-100%); }
-    66% { transform: translateX(-200%); }
-    100% { transform: translateX(0%); }
-}
-
+  } */
