@@ -1467,6 +1467,10 @@ main {
     font-size: 1.5rem;
 }
 
+.model h2 a:hover {
+    color: #cacab1;
+}
+
 .model img {
     width: 150px;
     height: 150px;
@@ -1539,3 +1543,55 @@ input[type="file"] {
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
 }*/
+
+
+
+/* INFLUENCER SECTION CONTENT */
+.influencer-profile {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.influencer-profile h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.influencer-profile h2 a {
+    text-decoration: none;
+    color: #594f2e;
+}
+
+.influencer-profile h2 a:hover {
+    color: #cacab1;
+}
+
+.influencer-details {
+    display: flex;
+    align-items: flex-start;
+}
+
+.influencer-details img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.influencer-info p {
+    margin: 10px 0;
+}
+
+.influencer-info a {
+    margin-right: 10px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.influencer-info a:hover {
+    color: #cacab1;
+}
