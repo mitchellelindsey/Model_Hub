@@ -91,20 +91,20 @@ const swiper1 = new Swiper('.slider-wrapper', {
 
 
   // section to the subscription plan-->
-  document.addEventListener("DOMContentLoaded", function() {
-    const buttons = document.querySelectorAll('.plan-button');
-    const planDetails = document.querySelectorAll('.plan-content');
+  document.addEventListener('DOMContentLoaded', function() {
+    const planButtons = document.querySelectorAll('.plan-button');
+    const planContents = document.querySelectorAll('.plan-content');
 
-    buttons.forEach(button => {
+    planButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Hide all plan details
-            planDetails.forEach(detail => detail.classList.remove('active'));
+            // Hide all plan contents
+            planContents.forEach(content => {
+                content.classList.remove('active');
+            });
 
-            // Show the selected plan details
-            const selectedPlan = document.getElementById(button.dataset.plan);
-            if (selectedPlan) {
-                selectedPlan.classList.add('active');
-            }
+            // Show the selected plan content
+            const plan = this.getAttribute('data-plan');
+            document.getElementById(plan).classList.add('active');
         });
     });
 });
@@ -128,3 +128,31 @@ const swiper1 = new Swiper('.slider-wrapper', {
 //});
 
 // section to the login and signup-->
+
+
+// Optional: JavaScript for model form and handling login checks and other functionalities
+//document.addEventListener('DOMContentLoaded', function () {
+    //const isLoggedIn = checkLoginStatus(); // Replace with actual login check logic
+    //if (!isLoggedIn) {
+        //window.location.href = 'login.html'; // Redirect to login page if not logged in
+    //}
+//});
+
+//function checkLoginStatus() {
+    // Replace this with actual logic to check if the user is logged in
+    //return false; // Assume user is not logged in for this example
+//}
+
+// Optional: JavaScript for model section
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-btn');
+
+    searchButton.addEventListener('click', () => {
+        const query = searchInput.value.trim().toLowerCase();
+        if (query) {
+            console.log(`Searching for: ${query}`);
+            // Add global search logic here
+        }
+    });
+});

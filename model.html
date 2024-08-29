@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModelHub</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to the Swiper for reviews CSS file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Link to the google icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Link to the social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to Google Fonts for Poppins and Futura -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+    <!-- Link to javascript -->
+    <script defer type="module" src="./scripts.js"></script>
+    <script defer type="module" src="./models.js"></script>
+
+</head>
+<body>
+    <!-- Header section with the website title, navigation, and buttons -->
+    <header>
+        <div class="header-container">
+            <h1><a href="about.html">ModelHub</a></h1> <!-- Website Title -->
+            <nav>
+                <ul>
+                    <li><a href="model.html">Models</a></li> <!-- Navigation link for Models -->
+                    <li><a href="#influencers">Influencers</a></li> <!-- Navigation link for Influencers -->
+                    <li><a href="#creators">Content Creators</a></li> <!-- Navigation link for Content Creators -->
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <a href="#login" class="btn">Log In</a> <!-- login Button -->
+                <a href="#signup" class="btn">Sign Up</a> <!-- signup Button -->
+            </div>
+        </div>
+        <!-- Thin line after the header -->
+        <hr class="header-line">
+        <!-- Search bar -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for models, influencers, or content creators">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
+
+    
+    <main>
+        <div class="models-list">
+            <div class="model">
+                <h2><a href="#modelProfile1">Mitchelle Lindsey</a></h2>
+                <img src="mitchelle_lindsey.jpg" alt="Mitchelle Lindsey" class="model-picture">
+                <p>Introduction: Experienced fashion model with a diverse portfolio...</p>
+                <div class="social-media">
+                    <a href="https://instagram.com/mitchellelindsey" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/mitchellelindsey" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <p>Ratings: ★★★★☆</p>
+            </div>
+
+            <div class="model">
+                <h2><a href="#modelProfile2">Henry Justin</a></h2>
+                <img src="henry_justin.jpg" alt="Henry Justin" class="model-picture">
+                <p>Introduction: Professional model specializing in commercial and runway...</p>
+                <div class="social-media">
+                    <a href="https://instagram.com" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <p>Ratings: ★★★★★</p>
+            </div>
+
+            <div class="model">
+                <h2><a href="#modelProfile3">Bernice Ibe</a></h2>
+                <img src="bernice_ibe.jpg" alt="Bernice Ibe" class="model-picture">
+                <p>Introduction: Professional model specializing in commercial and runway...</p>
+                <div class="social-media">
+                    <a href="https://instagram.com/bernice_ibe" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/bernice_ibe" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <p>Ratings: ★★★★★</p>
+            </div>
+
+            <div class="model">
+                <h2><a href="#modelProfile4">John Smith</a></h2>
+                <img src="john_smith.jpg" alt="John Smith" class="model-picture">
+                <p>Introduction: Professional model specializing in commercial and runway...</p>
+                <div class="social-media">
+                    <a href="https://instagram.com/johnsmith" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/johnsmith" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <p>Ratings: ★★★★★</p>
+            </div>
+
+            <div class="model">
+                <h2><a href="#modelProfile5">Irene Ajayi</a></h2>
+                <img src="irene_ajayi.jpg" alt="John Smith" class="model-picture">
+                <p>Introduction: Professional model specializing in commercial and runway...</p>
+                <div class="social-media">
+                    <a href="https://instagram.com/ireneajayi" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/ireneajayi" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <p>Ratings: ★★★★★</p>
+            </div>
+
+            <div class="model">
+                <h2><a href="#modelProfile6">Favour Lawrence</a></h2>
+                <img src="favour_lawrence.jpg" alt="John Smith" class="model-picture">
+                <p>Introduction: Professional model specializing in commercial and runway...</p>
+                <div class="social-media">
+                    <a href="https://instagram.com/" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <p>Ratings: ★★★★★</p>
+            </div>
+
+            
+        </div>
+    </main>
+</body>
+</html>
