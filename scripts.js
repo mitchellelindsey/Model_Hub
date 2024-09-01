@@ -162,4 +162,5 @@ document.querySelector('.btn-login')?.addEventListener('click', function() {
 })
 
 document.querySelector('.icon-close')?.addEventListener('click', function() {
-    document.query
+    document.querySelector('.login-form').classList.add('hidden')
+})

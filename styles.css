@@ -1649,4 +1649,69 @@ input[type="file"] {
     grid-template-columns: repeat(3, 1fr);
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 40
+    padding: 40px 20px;
+}
+
+.creator-profile {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.creator-profile:hover {
+    transform: translateY(-5px);
+}
+
+.creator-profile img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.creator-profile h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.creator-profile h2 a {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 0;
+    color: #594f2e;
+}
+
+.creator-profile h2 a:hover {
+    color: #cacab1;
+}
+
+.creator-details {
+    padding: 15px;
+    color: #333
+}
+
+.creator-info p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.creator-info a {
+    margin: 0 5px;
+    font-size: 20px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.creator-info a:hover {
+    color: #cacab1;
+}
+
+.creator-info strong {
+    font-weight: 600;
+}
+
