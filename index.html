@@ -36,8 +36,8 @@
                 </ul>
             </nav>
             <div class="header-buttons">
-                <a href="#login" class="btn">Log In</a> <!-- login Button -->
-                <a href="#signup" class="btn">Sign Up</a> <!-- signup Button -->
+                <a class="btn btn-login">Log In</a> <!-- login Button -->
+                <a class="btn">Sign Up</a> <!-- signup Button -->
             </div>
         </div>
         <!-- Thin line after the header -->
@@ -49,17 +49,17 @@
         </div>
     </header>
     
-    <div class="wrapper">
+    <div class="wrapper login-form hidden">
       <span class="icon-close"><ion-icon name="close"></ion-icon></span>
       <div class="form-box login">
         <h2>Login</h2>
         <form action="#">
-          <div class="input-box">
+          <div class="input-box input-box--1">
             <span class="icon"><ion-icon name="mail"></ion-icon></span>
             <input type="email" required>
             <label>Email</label>
           </div>
-          <div class="input-box">
+          <div class="input-box input-box--2">
             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
             <input type="password" required>
             <label>Password</label>
@@ -282,7 +282,7 @@
   
 <!-- Subscription Plans Section -->
 <section class="subscription-plans">
-  <div class="section__container">
+  <div class="section__container" id="packages">
       <h2 class="section__header">Find a Creative Plan That Suits You</h2>
       <p class="section__description">
           Subscribe for one year and save 20% off all your subscription fees.
@@ -293,7 +293,7 @@
           <button class="plan-button" data-plan="yearly">Yearly</button>
       </div>
       <div class="plan-details">
-          <div class="plan-content" id="quarterly">
+          <div class="plan-content active" id="quarterly">
               <h3>Quarterly Plan</h3>
               <p>$75 per quarter</p>
               <p>Get access to all features, priority support, and more.</p>
@@ -345,7 +345,7 @@
               <h4 class="footer__header">Community</h4>
               <ul class="footer__links">
                   <li><a href="#search-input" class="footer__link">Search People</a></li>
-                  <li><a href="#search-input" class="footer__link">Show Packages</a></li>
+                  <li><a href="#packages" class="footer__link">Show Packages</a></li>
                   <li><a href="#search-input" class="footer__link">Discover Agencies</a></li>
               </ul>
           </div>
@@ -394,6 +394,4 @@
 
     <!-- Link to the login icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-</html>"
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionic

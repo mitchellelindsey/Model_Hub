@@ -37,10 +37,10 @@ document.querySelectorAll('.dropdown-header').forEach(header => {
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect?.top >= 0 &&
+        rect?.left >= 0 &&
+        rect?.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect?.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
 
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
     const searchButton = document.getElementById('search-btn');
 
-    searchButton.addEventListener('click', () => {
+    searchButton?.addEventListener('click', () => {
         const query = searchInput.value.trim().toLowerCase();
         if (query) {
             console.log(`Searching for: ${query}`);
@@ -156,3 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.querySelector('.btn-login')?.addEventListener('click', function() {
+    document.querySelector('.login-form').classList.remove('hidden')
+})
+
+document.querySelector('.icon-close')?.addEventListener('click', function() {
+    document.query
