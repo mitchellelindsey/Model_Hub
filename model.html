@@ -6,6 +6,7 @@
     <title>ModelHub</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <!-- Link to the Swiper for reviews CSS file -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -36,8 +37,8 @@
                 </ul>
             </nav>
             <div class="header-buttons">
-                <a href="#login" class="btn">Log In</a> <!-- login Button -->
-                <a href="#signup" class="btn">Sign Up</a> <!-- signup Button -->
+                <a class="btn btn-login">Log In</a> <!-- login Button -->
+                <a class="btn btn-signup">Sign Up</a> <!-- signup Button -->
             </div>
         </div>
         <!-- Thin line after the header -->
@@ -48,12 +49,86 @@
             <button id="search-btn">Search</button>
         </div>
     </header>
+
+
+    <div class="wrapper login-form hidden">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+          <h2>Login</h2>
+          <form action="#">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox"> Remember me</label>
+              <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register">
+              <p>Don't have an account? <a href="#sign-up" class="signup-link">Sign Up</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+  
+      <div class="wrapper signup-form hidden">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box signup">
+          <h2>Sign Up</h2>
+          <form action="#">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" required>
+                <label>First Name</label>
+              </div>
+              <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" required>
+                <label>Last Name</label>
+              </div>
+              <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" required>
+                <label>Username</label>
+              </div>
+              <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+              </div>
+              <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+              </div>
+              <div class="remember-forgot">
+                <label><input type="checkbox"> I agree to the terms & conditions</label>
+              </div>
+              <button type="submit" class="btn">Sign Up</button>
+              <div class="login-register">
+                <p>Already have an account? <a href="log-in" class="login-link">Log In</a></p>
+              </div>
+            </form>
+          </div>
+      </div>
+
+    <header>
+        <h1>Fashion Models</h1>
+    </header>
     
     
     <section class="models-list">
         <div class="model__section__container">
             <div class="model-profile">
-                <h2><a href="#modelProfile">Mitchelle Lindsey</a></h2>
+                <h2><a href="../model_profiles/mitchelle_lindsey.html">Mitchelle Lindsey</a></h2>
                 <div class="model-details">
                     <img src="images/mitchelle_lindsey.jpg" alt="Mitchelle Lindsey" class="model-picture">
                     <div class="model-info">
@@ -69,14 +144,14 @@
             </div>
             
             <div class="model-profile">
-                <h2><a href="#modelProfile">Henry Justin</a></h2>
+                <h2><a href="#modelProfile">Frank Oscar</a></h2>
                 <div class="model-details">
-                    <img src="images/henry_justin.jpg" alt="Henry Justin" class="model-picture">
+                    <img src="images/frank_oscar.jpg" alt="Frank Oscar" class="model-picture">
                     <div class="model-info">
                         <p><strong>Profile Overview:</strong> Experienced fashion model with a diverse portfolio...</p>
                         <p>
-                            <a href="https://instagram.com/groovymono" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="https://twitter.com/groovymono" target="_blank"><i class="fab fa-twitter"></i></a> <!-- Twitter icon -->
+                            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a> <!-- Twitter icon -->
                             <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a> <!-- Tiktok icon -->
                         </p>
                         <p><strong>Ratings:</strong> ★★★★★</p>

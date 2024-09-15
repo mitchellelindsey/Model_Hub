@@ -6,6 +6,7 @@
     <title>ModelHub</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <!-- Link to the Swiper for reviews CSS file -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -37,7 +38,7 @@
             </nav>
             <div class="header-buttons">
                 <a class="btn btn-login">Log In</a> <!-- login Button -->
-                <a class="btn">Sign Up</a> <!-- signup Button -->
+                <a class="btn btn-signup">Sign Up</a> <!-- signup Button -->
             </div>
         </div>
         <!-- Thin line after the header -->
@@ -54,12 +55,12 @@
       <div class="form-box login">
         <h2>Login</h2>
         <form action="#">
-          <div class="input-box input-box--1">
+          <div class="input-box">
             <span class="icon"><ion-icon name="mail"></ion-icon></span>
             <input type="email" required>
             <label>Email</label>
           </div>
-          <div class="input-box input-box--2">
+          <div class="input-box">
             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
             <input type="password" required>
             <label>Password</label>
@@ -70,10 +71,52 @@
           </div>
           <button type="submit" class="btn">Login</button>
           <div class="login-register">
-            <p>Don't have an account? <a href="#" class="register-link">Sign Up</a></p>
+            <p>Don't have an account? <a href="#sign-up" class="signup-link">Sign Up</a></p>
           </div>
         </form>
       </div>
+    </div>
+
+
+    <div class="wrapper signup-form hidden">
+      <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+      <div class="form-box signup">
+        <h2>Sign Up</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+              <input type="text" required>
+              <label>First Name</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="person"></ion-icon></span>
+              <input type="text" required>
+              <label>Last Name</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="person"></ion-icon></span>
+              <input type="text" required>
+              <label>Username</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox"> I agree to the terms & conditions</label>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+            <div class="login-register">
+              <p>Already have an account? <a href="#log-in" class="login-link">Log In</a></p>
+            </div>
+          </form>
+        </div>
     </div>
 
 
@@ -109,7 +152,7 @@
 
         <!-- Get Started button -->
     <div class="get-started">
-        <a href="#signup" class="btn-get-started">Get Started</a>
+        <button href="#signup" class="btn-get-started">Get Started</button>
     </div>
 
     <!-- Image underneath the Get Started button -->
@@ -288,9 +331,9 @@
           Subscribe for one year and save 20% off all your subscription fees.
       </p>
       <div class="plan-buttons">
-          <button class="plan-button" data-plan="quarterly">Quarterly</button>
-          <button class="plan-button" data-plan="biannually">Biannually</button>
-          <button class="plan-button" data-plan="yearly">Yearly</button>
+          <button class="plan-button" data-plan="quarterly">QUARTERLY</button>
+          <button class="plan-button" data-plan="biannually">BIANNUALLY</button>
+          <button class="plan-button" data-plan="yearly">YEARLY</button>
       </div>
       <div class="plan-details">
           <div class="plan-content active" id="quarterly">
@@ -309,7 +352,7 @@
               <p>Enjoy all features, priority support, and exclusive content.</p>
           </div>
           <!-- Get Started Button -->
-          <button class="get-started-button">Get Started</button>
+          <button class="btn-get-started">Get Started</button>
       </div>
   </div>
 </section>
@@ -346,15 +389,15 @@
               <ul class="footer__links">
                   <li><a href="#search-input" class="footer__link">Search People</a></li>
                   <li><a href="#packages" class="footer__link">Show Packages</a></li>
-                  <li><a href="#search-input" class="footer__link">Discover Agencies</a></li>
+                  <li><a href="#client" class="footer__link">Our Community</a></li>
               </ul>
           </div>
           <div class="footer__section">
               <h4 class="footer__header">News</h4>
               <ul class="footer__links">
-                  <li><a href="#" class="footer__link">Blog</a></li>
-                  <li><a href="#" class="footer__link">Trending</a></li>
-                  <li><a href="#" class="footer__link">New Faces</a></li>
+                  <li><a href="blog.html" class="footer__link">Blog</a></li>
+                  <li><a href="blog.html" class="footer__link">Trending</a></li>
+                  <li><a href="blog.html" class="footer__link">Job Briefs</a></li>
               </ul>
           </div>
       </div>
@@ -396,4 +439,4 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-</html>"
+</html>

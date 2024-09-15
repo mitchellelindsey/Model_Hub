@@ -1,7 +1,7 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
 // Adding a basic functionality for the search button
-document.getElementById('search-btn').addEventListener('click', function() {
+document.getElementById('search-btn')?.addEventListener('click', function() {
     const query = document.getElementById('search-input').value.trim();
     if (query) {
         // For now, we'll just alert the search query.
@@ -14,7 +14,7 @@ document.getElementById('search-btn').addEventListener('click', function() {
 
 
 // /* Styling for the 'How ModelHub Can Help You as a Creative' section */
-document.querySelectorAll('.dropdown-header').forEach(header => {
+document.querySelectorAll('.dropdown-header')?.forEach(header => {
     header.addEventListener('click', function() {
         const content = this.nextElementSibling;
 
@@ -35,7 +35,7 @@ document.querySelectorAll('.dropdown-header').forEach(header => {
 
 // /* Container for the "Connect With Us" section */
 function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
+    const rect = element?.getBoundingClientRect();
     return (
         rect?.top >= 0 &&
         rect?.left >= 0 &&
@@ -157,10 +157,71 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//login section
 document.querySelector('.btn-login')?.addEventListener('click', function() {
+
+    if (!document.querySelector('.signup-form').classList.contains('hidden'))
+        document.querySelector('.signup-form').classList.add('hidden')
+
     document.querySelector('.login-form').classList.remove('hidden')
+})
+
+document.querySelector('.signup-link')?.addEventListener('click', function() {
+    if (!document.querySelector('.login-form').classList.contains('hidden'))
+        document.querySelector('.login-form').classList.add('hidden')
+
+    document.querySelector('.signup-form').classList.remove('hidden')
 })
 
 document.querySelector('.icon-close')?.addEventListener('click', function() {
     document.querySelector('.login-form').classList.add('hidden')
 })
+
+//signup section
+document.querySelector('.btn-signup')?.addEventListener('click', function() {
+
+    if (!document.querySelector('.login-form').classList.contains('hidden'))
+        document.querySelector('.login-form').classList.add('hidden')
+
+    document.querySelector('.signup-form').classList.remove('hidden')
+})
+
+document.querySelector('.login-link')?.addEventListener('click', function() {
+    if (!document.querySelector('.signup-form').classList.contains('hidden'))
+        document.querySelector('.signup-form').classList.add('hidden')
+
+    document.querySelector('.login-form').classList.remove('hidden')
+})
+
+document.querySelector('.signup-form .icon-close')?.addEventListener('click', function() {
+    document.querySelector('.signup-form')?.classList.add('hidden')
+})
+
+
+    document.querySelectorAll('.btn-get-started')?.forEach(btn => {btn.addEventListener('click', function() {
+        if (!document.querySelector('.login-form')?.classList.contains('hidden'))
+            document.querySelector('.login-form')?.classList.add('hidden')
+
+        document.querySelector('.signup-form')?.classList.remove('hidden')
+    })})
+
+
+
+
+// section FOR MODEL PROFILES
+document.querySelector('.review-form')?.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('client-name').value;
+    const review = document.getElementById('client-review').value;
+    const rating = document.getElementById('client-rating').value;
+    
+    const reviewContainer = document.querySelector('.reviews');
+    const newReview = document.createElement('p');
+    newReview.innerHTML = `<strong>${name}:</strong> "${review}" ${'★'.repeat(rating)}${'☆'.repeat(5-rating)}`;
+    
+    reviewContainer.appendChild(newReview);
+    
+    // Reset form fields
+    this.reset();
+});
